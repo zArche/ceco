@@ -27,7 +27,7 @@ LAST_13_MONTH_CPI_KW = {
 
 # 近13个月环比数据请求参数
 LAST_13_MONTH_CPI_M2M_DFWDS = {
-    "dfwds": '[{"wdcode": "sj", "valuecode": "LAST13"}]'
+    "dfwds": '[{"wdcode": "zb", "valuecode": "A010301"}]'
 }
 
 # 近13个月同比数据请求参数
@@ -95,6 +95,7 @@ def parse_cpi(json_obj):  # cpi解析
         for zb_node in zb_nodes["nodes"]:  # 获取该项纪录指标描述
             if zb_wd["valuecode"] == zb_node["code"]:
                 zb_des = zb_node["name"].replace("(上月=100)", "")  # 清洗数据
+                zb_des = zb_des.replace("(上年同月=100)", "")
                 break
 
         zb = zb_wd["valuecode"]
@@ -125,6 +126,7 @@ def get_last_13_month_cpi(last_13_month_cp_kw):
     else:
         response = requests.get(contants.STATS_GOV_URL, params=last_13_month_cp_kw, headers=HEARDS)
         json_str = response.text
+        log_d(TAG, "URL:" + response.url)
 
     json_obj = json.loads(json_str, strict=False)
     if json_obj["returncode"] == 200:
@@ -169,16 +171,15 @@ def test_last_13_month_cpi_m2m():
     test_data = LAST_13_MONTH_CPI_M2M
     cpis = get_last_13_month_cpi_m2m()
 
-    if DEBUG:
-        for key in cpis:
-            log_d(TAG, "-----------------------------------------")
-            log_d(TAG, "类型:" + key)
-            for cpi in cpis[key]:
-                info = "%s%s:环比上个月 [%s] [%.2f%%] " % (cpi.sj_des,
-                                                      cpi.zb_des.replace("居民消费价格指数", "CPI"),
-                                                      ("增长" if cpi.inc else "降低"), cpi.percent)
-                log_d(TAG, info)
-            log_d(TAG, "-----------------------------------------")
+    for key in cpis:
+        log_d(TAG, "-----------------------------------------")
+        log_d(TAG, "类型:" + key)
+        for cpi in cpis[key]:
+            info = "%s%s:环比上个月 [%s] [%.2f%%] " % (cpi.sj_des,
+                                                  cpi.zb_des.replace("居民消费价格指数", "CPI"),
+                                                  ("增长" if cpi.inc else "降低"), cpi.percent)
+            log_d(TAG, info)
+        log_d(TAG, "-----------------------------------------")
 
 
 def test_last_13_month_cpi_y2y():
@@ -187,16 +188,15 @@ def test_last_13_month_cpi_y2y():
 
     cpis = get_last_13_month_cpi_y2y()
 
-    if DEBUG:
-        for key in cpis:
-            log_d(TAG, "-----------------------------------------")
-            log_d(TAG, "类型:" + key)
-            for cpi in cpis[key]:
-                info = "%s%s:同比去年同月 [%s] [%.2f%%] " % (cpi.sj_des,
-                                                       cpi.zb_des.replace("居民消费价格指数", "CPI"),
-                                                       ("增长" if cpi.inc else "降低"), cpi.percent)
-                log_d(TAG, info)
-            log_d(TAG, "-----------------------------------------")
+    for key in cpis:
+        log_d(TAG, "-----------------------------------------")
+        log_d(TAG, "类型:" + key)
+        for cpi in cpis[key]:
+            info = "%s%s:同比去年同月 [%s] [%.2f%%] " % (cpi.sj_des,
+                                                   cpi.zb_des.replace("居民消费价格指数", "CPI"),
+                                                   ("增长" if cpi.inc else "降低"), cpi.percent)
+            log_d(TAG, info)
+        log_d(TAG, "-----------------------------------------")
 
 
 def test_last_13_month_food_cpi_y2y():
@@ -205,19 +205,18 @@ def test_last_13_month_food_cpi_y2y():
 
     cpis = get_last_13_month_food_cpi_y2y()
 
-    if DEBUG:
-        for key in cpis:
-            log_d(TAG, "-----------------------------------------")
-            log_d(TAG, "类型:" + key)
-            for cpi in cpis[key]:
-                info = "%s%s:同比去年同月 [%s] [%.2f%%] " % (cpi.sj_des,
-                                                       cpi.zb_des.replace("居民消费价格指数", "CPI"),
-                                                       ("增长" if cpi.inc else "降低"), cpi.percent)
-                log_d(TAG, info)
-            log_d(TAG, "-----------------------------------------")
+    for key in cpis:
+        log_d(TAG, "-----------------------------------------")
+        log_d(TAG, "类型:" + key)
+        for cpi in cpis[key]:
+            info = "%s%s:同比去年同月 [%s] [%.2f%%] " % (cpi.sj_des,
+                                                   cpi.zb_des.replace("居民消费价格指数", "CPI"),
+                                                   ("增长" if cpi.inc else "降低"), cpi.percent)
+            log_d(TAG, info)
+        log_d(TAG, "-----------------------------------------")
 
 
 if __name__ == "__main__":
-    test_last_13_month_cpi_m2m()
+    # test_last_13_month_cpi_m2m()
     # test_last_13_month_cpi_y2y()
-    # test_last_13_month_food_cpi_y2y()
+    test_last_13_month_food_cpi_y2y()

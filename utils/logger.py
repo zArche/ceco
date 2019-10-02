@@ -8,8 +8,7 @@ def log(pre, tag, message):
 
 
 def log_d(tag, message):
-    if DEBUG:
-        log("[+]", tag, message)
+    log("[+]", tag, message)
 
 
 def log_e(tag, message):
