@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c163a707-5057-4989-bee0-318e42421f21" name="Default" comment="" />
+    <list default="true" id="c163a707-5057-4989-bee0-318e42421f21" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/stats_gov/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/stats_gov/cpi.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/stats_gov/testdata.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/stats.gov/cpi.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/stats.gov/testdata.py" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/stats.gov/__init__.py" afterPath="$PROJECT_DIR$/monitor/cpimonitor.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/stats.gov/contants.py" afterPath="$PROJECT_DIR$/stats_gov/contants.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/stats.gov/gdp.py" afterPath="$PROJECT_DIR$/stats_gov/gdp.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -11,11 +22,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="cpi.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/stats.gov/cpi.py">
+      <file leaf-file-name="cpi.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/stats_gov/cpi.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="116">
-              <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+            <state relative-caret-position="141">
+              <caret line="110" column="20" lean-forward="true" selection-start-line="110" selection-start-column="20" selection-end-line="110" selection-end-column="20" />
               <folding>
                 <element signature="e#16#31#0" expanded="true" />
               </folding>
@@ -23,11 +34,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="testdata.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/stats.gov/testdata.py">
+      <file leaf-file-name="cpimonitor.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/monitor/cpimonitor.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="1755" column="39" lean-forward="false" selection-start-line="1755" selection-start-column="30" selection-end-line="1755" selection-end-column="39" />
+            <state relative-caret-position="270">
+              <caret line="18" column="19" lean-forward="true" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
+              <folding>
+                <element signature="e#16#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="testdata.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/stats_gov/testdata.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2086">
+              <caret line="2035" column="24" lean-forward="true" selection-start-line="2035" selection-start-column="24" selection-end-line="2035" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -46,7 +69,13 @@
     <findStrings>
       <find>freshsort</find>
       <find>wdnodes</find>
+      <find>a</find>
+      <find>test</find>
+      <find>ZB_CPI_M2M</find>
     </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -57,20 +86,23 @@
         <option value="$PROJECT_DIR$/utils/__init__.py" />
         <option value="$PROJECT_DIR$/stats.gov/__init__.py" />
         <option value="$PROJECT_DIR$/utils/timeutils.py" />
-        <option value="$PROJECT_DIR$/stats.gov/testdata.py" />
         <option value="$PROJECT_DIR$/utils/logger.py" />
         <option value="$PROJECT_DIR$/stats.gov/contants.py" />
         <option value="$PROJECT_DIR$/configs.py" />
+        <option value="$PROJECT_DIR$/stats.gov/testdata.py" />
         <option value="$PROJECT_DIR$/stats.gov/cpi.py" />
+        <option value="$PROJECT_DIR$/stats_gov/cpi.py" />
+        <option value="$PROJECT_DIR$/monitor/cpimonitor.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="11" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="20" />
     <option name="y" value="23" />
-    <option name="width" value="1440" />
-    <option name="height" value="823" />
+    <option name="width" value="1420" />
+    <option name="height" value="796" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -98,12 +130,12 @@
             <path>
               <item name="ceco" type="b2602c69:ProjectViewProjectNode" />
               <item name="ceco" type="462c0819:PsiDirectoryNode" />
-              <item name="stats.gov" type="462c0819:PsiDirectoryNode" />
+              <item name="monitor" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ceco" type="b2602c69:ProjectViewProjectNode" />
               <item name="ceco" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
+              <item name="stats_gov" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -123,7 +155,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.cpi">
+  <component name="RunManager" selected="Python.cpimonitor">
     <configuration name="cpi" type="PythonConfigurationType" factoryName="Python">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -131,12 +163,29 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="/usr/bin/python" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/stats.gov" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/stats_gov" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="ceco" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/stats.gov/cpi.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/stats_gov/cpi.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
+    <configuration name="cpimonitor" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/usr/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/monitor" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ceco" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/monitor/cpimonitor.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -175,10 +224,11 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <list size="3">
+    <list size="4">
       <item index="0" class="java.lang.String" itemvalue="Python.cpi" />
-      <item index="1" class="java.lang.String" itemvalue="Python.timeutils" />
-      <item index="2" class="java.lang.String" itemvalue="Python.logger" />
+      <item index="1" class="java.lang.String" itemvalue="Python.cpimonitor" />
+      <item index="2" class="java.lang.String" itemvalue="Python.timeutils" />
+      <item index="3" class="java.lang.String" itemvalue="Python.logger" />
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
@@ -195,17 +245,17 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="2" y="24" width="1440" height="823" extended-state="6" />
+    <frame x="20" y="23" width="1420" height="796" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2532656" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.375" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38088444" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32967034" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -242,7 +292,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/stats.gov/gdp.py">
+    <entry file="file://$PROJECT_DIR$/stats_gov/gdp.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
@@ -266,7 +316,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/stats.gov/__init__.py">
+    <entry file="file://$PROJECT_DIR$/stats_gov/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -290,18 +340,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/stats.gov/contants.py">
+    <entry file="file://$PROJECT_DIR$/stats_gov/contants.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/configs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -311,7 +353,7 @@
         <state relative-caret-position="195">
           <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding>
-            <element signature="e#0#45#0" expanded="true" />
+            <element signature="e#0#45#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -324,20 +366,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/stats.gov/testdata.py">
+    <entry file="file://$PROJECT_DIR$/configs.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="1755" column="39" lean-forward="false" selection-start-line="1755" selection-start-column="30" selection-end-line="1755" selection-end-column="39" />
+        <state relative-caret-position="30">
+          <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="12" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/stats.gov/cpi.py">
+    <entry file="file://$PROJECT_DIR$/stats_gov/testdata.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+        <state relative-caret-position="2086">
+          <caret line="2035" column="24" lean-forward="true" selection-start-line="2035" selection-start-column="24" selection-end-line="2035" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stats_gov/cpi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="110" column="20" lean-forward="true" selection-start-line="110" selection-start-column="20" selection-end-line="110" selection-end-column="20" />
           <folding>
             <element signature="e#16#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/monitor/cpimonitor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="19" lean-forward="true" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
+          <folding>
+            <element signature="e#16#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
