@@ -1,5 +1,4 @@
-from timeutils import get_current_format_time
-from configs import DEBUG
+from time_utils import get_current_format_time
 
 
 def log(pre, tag, message):

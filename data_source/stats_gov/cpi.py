@@ -1,14 +1,15 @@
 # coding=utf-8
 
-import requests
 import json
-import contants
-import sys
 import math
+import sys
 
-from utils.logger import *
-from utils.timeutils import get_timestamp_of_now
+import requests
+
+import contants
 from testdata import LAST_13_MONTH_CPI_M2M, LAST_13_MONTH_CPI_Y2Y, LAST_13_MONTH_FOOD_CPI_Y2Y
+from utils.logger import *
+from data_source.cache_controller import *
 from configs import DEBUG
 
 reload(sys)
@@ -109,31 +110,40 @@ def parse_cpi(json_obj):  # cpi解析
 
 def classify_cpi(cpis):  # 按cpi指标分类
     results = dict()
-    for cpi in cpis:
-        key = cpi.zb
-        sub_type_cpis = results[key] if results.has_key(key) else list()
-        sub_type_cpis.append(cpi)
-        results[key] = sub_type_cpis
+    if cpis is not None and len(cpis) > 0:
+        for cpi in cpis:
+            key = cpi.zb
+            sub_type_cpis = results[key] if results.has_key(key) else list()
+            sub_type_cpis.append(cpi)
+            results[key] = sub_type_cpis
     return results
 
 
 # 最近13个月数据
-def get_last_13_month_cpi(last_13_month_cp_kw):
+def get_last_13_month_cpi(tag, last_13_month_cp_kw):
     result = None
     if DEBUG:
         json_str = test_data
         log_d(TAG, "Use the test cpi data")
+    elif not is_cache_invalid(tag):
+        json_str = get_cache(tag)
+        log_d(TAG, "Use the cache cpi data")
     else:
         response = requests.get(contants.STATS_GOV_URL, params=last_13_month_cp_kw, headers=HEARDS)
         json_str = response.text
         log_d(TAG, "URL:" + response.url)
+        log_d(TAG, "Response code:" + str(response.status_code))
 
-    json_obj = json.loads(json_str, strict=False)
-    if json_obj["returncode"] == 200:
-        log_d(TAG, "Query CPI data success!")
-        result = parse_cpi(json_obj)
-    else:
-        log_e(TAG, "Query CPI data failed! Error code: " + str(json_obj["returncode"]))
+    try:
+        json_obj = json.loads(json_str, strict=False)
+        if json_obj["returncode"] == 200:
+            log_d(TAG, "Query CPI data success!")
+            save_cache(tag, json_str)
+            result = parse_cpi(json_obj)
+        else:
+            log_e(TAG, "Query CPI data failed! Error code: " + str(json_obj["returncode"]))
+    except Exception, e:
+        log_e(TAG, str(e))
 
     return result
 
@@ -144,7 +154,7 @@ def get_last_13_month_cpi_m2m():
     now = get_timestamp_of_now()
     last_13_month_cpi_m2m_kw["k1"] = now
 
-    results = get_last_13_month_cpi(last_13_month_cpi_m2m_kw)
+    results = get_last_13_month_cpi("m2m", last_13_month_cpi_m2m_kw)
     return classify_cpi(results)
 
 
@@ -153,7 +163,7 @@ def get_last_13_month_cpi_y2y():
     global last_13_month_cpi_y2y_kw
     now = get_timestamp_of_now()
     last_13_month_cpi_y2y_kw["k1"] = now
-    results = get_last_13_month_cpi(last_13_month_cpi_y2y_kw)
+    results = get_last_13_month_cpi("y2y", last_13_month_cpi_y2y_kw)
     return classify_cpi(results)
 
 
@@ -162,7 +172,7 @@ def get_last_13_month_food_cpi_y2y():
     global last_13_month_food_cpi_y2y_kw
     now = get_timestamp_of_now()
     last_13_month_food_cpi_y2y_kw["k1"] = now
-    results = get_last_13_month_cpi(last_13_month_food_cpi_y2y_kw)
+    results = get_last_13_month_cpi("food_y2y", last_13_month_food_cpi_y2y_kw)
     return classify_cpi(results)
 
 
