@@ -9,7 +9,7 @@ reload(sys)
 sys.path.append("..")
 sys.setdefaultencoding('utf8')
 
-ZB_GDP_Y2Y = "A010301"  # gdp当季同比总指标
+ZB_TOTAL_GDP_Y2Y = "A010302"  # gdp累计同比总指标
 
 THRESHOLD = 10  # 波动5%即预警
 
@@ -52,29 +52,44 @@ def monitor(gdp, gdps):  # cpi指数异常预警
     sorted_gdps = sorted(gdps.items(), key=lambda x: x[1][0].percent, reverse=True)
 
     warning_gdps = list()
+    max = sys.maxint
+    min = -1
 
     for k, v in sorted_gdps:
-        if k == ZB_GDP_Y2Y:
+        if k == ZB_TOTAL_GDP_Y2Y:
             continue
 
         sub_type_gdp = v[0]
-        if sub_type_gdp.zb_des.find("_累计值") > 0:
+
+        if sub_type_gdp.zb_des.find("_当季值") > 0:
             continue
 
-        if v[0].percent >= THRESHOLD:
+        if sub_type_gdp.percent >= THRESHOLD:
             log_e(TAG, "%s [%s] 波动较大! [%s] 幅度为 [%.2f%%]" % (
                 sub_type_gdp.sj_des,
-                sub_type_gdp.zb_des.replace("(上年同期=100)_当季值", ""),
+                sub_type_gdp.zb_des,
                 ("上升" if sub_type_gdp.inc else "下降"), sub_type_gdp.percent))
 
             warning_gdps.append(v)
 
-    return warning_gdps
+        if sub_type_gdp.percent >= min:
+            min = sub_type_gdp.percent
+            max_gdp = v
+
+        if sub_type_gdp.percent <= max:
+            max = sub_type_gdp.percent
+            min_gdp = v
+
+    top_and_bottom_gdps = list()  # 涨幅最高与最低
+    top_and_bottom_gdps.append(max_gdp)
+    top_and_bottom_gdps.append(min_gdp)
+
+    return warning_gdps, top_and_bottom_gdps
 
 
 def monitor_y2y(last_12_quarter_gdp_y2y):  # 同比指数监控
 
-    last_quarter_gdp_y2y = last_12_quarter_gdp_y2y[ZB_GDP_Y2Y][0]  # 最近一个月cpi
+    last_quarter_gdp_y2y = last_12_quarter_gdp_y2y[ZB_TOTAL_GDP_Y2Y][0]  # 最近一个月cpi
 
     return monitor(last_quarter_gdp_y2y, last_12_quarter_gdp_y2y)
 

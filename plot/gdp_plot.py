@@ -13,7 +13,8 @@ reload(sys)
 sys.setdefaultencoding("utf-8")
 sys.path.append("..")
 
-ZB_GDP_Y2Y = "A010301"  # gdp当季同比总指标
+ZB_CURRENT_QUARTER_GDP_Y2Y = "A010301"  # gdp当季同比总指标
+ZB_TOTAL_GDP_Y2Y = "A010302"  # gdp累计同比总指标
 
 COLOR = ['red', 'green', 'blue', 'orange', 'brown', 'purple', 'pink', 'gray', 'olive', 'cyan']
 
@@ -29,42 +30,43 @@ def get_random_color():
 
 
 def draw_normal_gdp(gdp_y2y_data):
-    x_y2y = list()
-    y_y2y = list()
-    gdp_y2y_data = gdp_y2y_data[ZB_GDP_Y2Y] if gdp_y2y_data.has_key(ZB_GDP_Y2Y) else list()
-    for gdp in gdp_y2y_data:
-        x_y2y.append(gdp.sj_des)
-        y_y2y.append(gdp.percent if gdp.inc else -gdp.percent)
+    x_total_y2y = list()
+    y_total_y2y = list()
+    gdp_total_y2y_data = gdp_y2y_data[ZB_TOTAL_GDP_Y2Y] if gdp_y2y_data.has_key(ZB_TOTAL_GDP_Y2Y) else list()
+    for gdp in gdp_total_y2y_data:
+        x_total_y2y.append(gdp.sj_des)
+        y_total_y2y.append(gdp.percent if gdp.inc else -gdp.percent)
 
-    x_y2y.reverse()
-    y_y2y.reverse()
+    x_total_y2y.reverse()
+    y_total_y2y.reverse()
 
     plt.figure(figsize=(10, 5))  # 设置画布大小
-    plt.title(u'%s' % gdp_y2y_data[0].zb_des)  # 标题
+    plt.title(u'国内生产总值指数')  # 标题
     plt.xlabel(u'时间')  # x坐标
     plt.ylabel(u'涨幅')  # y坐标
 
     # 这里设置线宽、线型、线条颜色、点大小等参数
-    plt.plot(x_y2y, y_y2y, label=u'同比去年同期', linewidth=1, color='red', marker='o',
+    plt.plot(x_total_y2y, y_total_y2y, label=u'%s' % gdp_total_y2y_data[0].zb_des,
+             linewidth=1, color='red', marker='o',
              markerfacecolor='orange',
              markersize=3)
 
     # 每个数据点加标签
-    for a, b in zip(x_y2y, y_y2y):
+    for a, b in zip(x_total_y2y, y_total_y2y):
         plt.text(a, b, "%.2f%%" % b, ha='center', va='bottom', fontsize=10)
 
-    # plt.legend(loc='upper left')
+    plt.legend(loc='lower left')
 
     plt.savefig(OUT_PUT_DIR + 'normal_gdp.png', bbox_inches='tight')  # bbox_inches去掉两边留白
     plt.show()
 
 
-def draw_warning_gdp(warning_gdps):
+def draw_top_and_bottom_gdp(warning_gdps):
     if len(warning_gdps) == 0:
         return
 
     plt.figure(figsize=(10, 5))  # 设置画布大小
-    plt.title(u'涨幅>=10%行业增加值指数')  # 标题
+    plt.title(u'涨幅最高与最低行业增加值指数')  # 标题
     plt.xlabel(u'时间')  # x坐标
     plt.ylabel(u'涨幅')  # y坐标
 
@@ -87,9 +89,9 @@ def draw_warning_gdp(warning_gdps):
         for a, b in zip(x, y):
             plt.text(a, b, "%.2f%%" % b, ha='center', va='bottom', fontsize=10)
 
-    plt.legend(loc='upper left')
+    plt.legend(loc='center left')
 
-    plt.savefig(OUT_PUT_DIR + 'warning_gdp.png', bbox_inches='tight')  # bbox_inches去掉两边留白
+    plt.savefig(OUT_PUT_DIR + 'top_and_bottom_gdp.png', bbox_inches='tight')  # bbox_inches去掉两边留白
     plt.show()
 
 
@@ -97,6 +99,6 @@ if __name__ == "__main__":
     gdp_y2y_data = get_last_12_quarter_gdp_y2y()
 
     draw_normal_gdp(gdp_y2y_data)
-    warning_gdps = monitor(gdp_y2y_data[ZB_GDP_Y2Y][0], gdp_y2y_data)
+    _, top_and_bottom_gdps = monitor(gdp_y2y_data[ZB_CURRENT_QUARTER_GDP_Y2Y][0], gdp_y2y_data)
 
-    draw_warning_gdp(warning_gdps)
+    draw_top_and_bottom_gdp(top_and_bottom_gdps)
