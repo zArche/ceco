@@ -8,6 +8,7 @@ from data_source.stats_gov.cpi import get_last_13_month_cpi_m2m, get_last_13_mon
     get_last_13_month_food_cpi_y2y
 
 from monitor.cpi_monitor import monitor
+from configs import PROJECT_DIR
 
 reload(sys)
 sys.setdefaultencoding("utf-8")
@@ -21,6 +22,8 @@ COLOR = ['red', 'green', 'blue', 'orange', 'brown', 'purple', 'pink', 'gray', 'o
 
 plt.rcParams['savefig.dpi'] = 150  # 图片像素 
 plt.rcParams['figure.dpi'] = 150  # 分辨率
+
+OUT_PUT_DIR = PROJECT_DIR + "/output/"
 
 
 def get_random_color():
@@ -73,7 +76,7 @@ def draw_normal_cpi(cpi_m2m_data, cpi_y2y_data):
 
     plt.legend(loc='upper left')
 
-    plt.savefig('/Users/arche/Workspace/Python/ceco/plot/normal_cpi.png', bbox_inches='tight')  # bbox_inches去掉两边留白
+    plt.savefig(OUT_PUT_DIR + 'normal_cpi.png', bbox_inches='tight')  # bbox_inches去掉两边留白
     plt.show()
 
 
@@ -103,7 +106,7 @@ def draw_food_cpi(cpi_food_y2y_data):
 
     plt.legend(loc='upper left')
 
-    plt.savefig('/Users/arche/Workspace/Python/ceco/plot/food_cpi.png', bbox_inches='tight')  # bbox_inches去掉两边留白
+    plt.savefig(OUT_PUT_DIR + 'food_cpi.png', bbox_inches='tight')  # bbox_inches去掉两边留白
     plt.show()
 
 
@@ -137,7 +140,7 @@ def draw_warning_cpi(warning_cpis):
 
     plt.legend(loc='upper left')
 
-    plt.savefig('/Users/arche/Workspace/Python/ceco/plot/warning_cpi.png', bbox_inches='tight')  # bbox_inches去掉两边留白
+    plt.savefig(OUT_PUT_DIR + 'warning_cpi.png', bbox_inches='tight')  # bbox_inches去掉两边留白
     plt.show()
 
 

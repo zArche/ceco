@@ -144,7 +144,7 @@ def test_last_12_quarter_gdp_y2y():
         log_d(TAG, "类型:" + key)
         for gdp in gdps[key]:
             info = "%s%s:同比去年同月 [%s] [%.2f%%] " % (gdp.sj_des,
-                                                   gdp.zb_des.replace("居民消费价格指数", "CPI"),
+                                                   gdp.zb_des,
                                                    ("增长" if gdp.inc else "降低"), gdp.percent)
             log_d(TAG, info)
         log_d(TAG, "-----------------------------------------")
