@@ -170,21 +170,31 @@ def draw_money_flow(flow):
     x = [data[0][5:10].replace("-", "") for data in flow]
     y = [data[1] for data in flow]
 
+    y1 = []
+    y2 = []
+
+    for i in range(0, len(y)):
+        if y[i] >= 0:
+            y1.append(y[i])
+            y2.append(0)
+        else:
+            y1.append(0)
+            y2.append(y[i])
+
     plt.figure(figsize=(10, 5))  # 设置画布大小
-    plt.title(u'8月主力资金净流入')  # 标题
+    plt.title(u'8月主力资金净流入(单位:亿元)')  # 标题
     plt.xlabel(u'时间')  # x坐标
     plt.ylabel(u'净额')  # y坐标
 
     # 这里设置线宽、线型、线条颜色、点大小等参数
-    plt.plot(x, y, label=u'主力净流入(单位:亿元)', linewidth=1, color='green', marker='o',
-             markerfacecolor='blue',
-             markersize=3)
+    plt.bar(x, y1, label=u'主力净流入(单位:亿元)', linewidth=1, color='red')
+    plt.bar(x, y2, label=u'主力净流入(单位:亿元)', linewidth=1, color='green')
 
     # 每个数据点加标签
     for a, b in zip(x, y):
-        plt.text(a, b, "%.2f" % b, ha='center', va='bottom', fontsize=10)
+        plt.text(a, b, "%.2f" % b, ha='center', va=('top' if b < 0 else 'bottom'), fontsize=10)
 
-    plt.legend(loc='upper left')
+    # plt.legend(loc='upper left')
 
     plt.savefig(OUT_PUT_DIR + 'money_flow.png', bbox_inches='tight')  # bbox_inches去掉两边留白
     plt.show()

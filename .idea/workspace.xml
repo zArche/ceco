@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c163a707-5057-4989-bee0-318e42421f21" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/money_flow.png" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/house_prices.png" afterPath="$PROJECT_DIR$/output/house_prices.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data_source/tushare/m2.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plot/m2_plot.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/stock.png" afterPath="$PROJECT_DIR$/output/stock.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plot/house_plot.py" afterPath="$PROJECT_DIR$/plot/house_plot.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plot/stock_plot.py" afterPath="$PROJECT_DIR$/plot/stock_plot.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,23 +17,43 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="cpi_plot.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/plot/cpi_plot.py">
+      <file leaf-file-name="stock.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data_source/tushare/stock.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="79" selection-end-column="14" />
+            <state relative-caret-position="137">
+              <caret line="20" column="42" lean-forward="true" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="m2.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data_source/tushare/m2.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="32" lean-forward="true" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="house_invest.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data_source/stats_gov/house_invest.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="200">
+              <caret line="140" column="63" lean-forward="true" selection-start-line="140" selection-start-column="63" selection-end-line="140" selection-end-column="63" />
               <folding>
-                <element signature="e#15#46#0" expanded="true" />
+                <element signature="e#16#27#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="stock.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data_source/tushare/stock.py">
+      <file leaf-file-name="testdata.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data_source/stats_gov/testdata.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+            <state relative-caret-position="117">
+              <caret line="9266" column="30" lean-forward="false" selection-start-line="9266" selection-start-column="0" selection-end-line="9266" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -42,8 +62,8 @@
       <file leaf-file-name="stock_plot.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/plot/stock_plot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="246">
-              <caret line="175" column="28" lean-forward="true" selection-start-line="175" selection-start-column="28" selection-end-line="175" selection-end-column="28" />
+            <state relative-caret-position="1446">
+              <caret line="204" column="0" lean-forward="true" selection-start-line="204" selection-start-column="0" selection-end-line="204" selection-end-column="0" />
               <folding>
                 <element signature="e#15#46#0" expanded="true" />
               </folding>
@@ -51,46 +71,36 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cpi.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data_source/stats_gov/cpi.py">
+      <file leaf-file-name="m2_plot.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/plot/m2_plot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="14" />
+            <state relative-caret-position="148">
+              <caret line="27" column="27" lean-forward="true" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="27" />
               <folding>
-                <element signature="e#16#27#0" expanded="true" />
+                <element signature="e#15#46#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="house.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data_source/anjuke/house.py">
+      <file leaf-file-name="pyplot.py" pinned="false" current-in-tab="false">
+        <entry file="file:///Library/Python/2.7/site-packages/matplotlib/pyplot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="17" column="31" lean-forward="true" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
+            <state relative-caret-position="144">
+              <caret line="2774" column="0" lean-forward="false" selection-start-line="2774" selection-start-column="0" selection-end-line="2774" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="house_plot.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="house_plot.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/plot/house_plot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="215">
-              <caret line="37" column="27" lean-forward="false" selection-start-line="37" selection-start-column="27" selection-end-line="37" selection-end-column="27" />
+            <state relative-caret-position="58">
+              <caret line="40" column="23" lean-forward="false" selection-start-line="40" selection-start-column="23" selection-end-line="40" selection-end-column="23" />
               <folding>
                 <element signature="e#15#46#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="collections.py" pinned="false" current-in-tab="false">
-        <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/collections.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="137">
-              <caret line="62" column="0" lean-forward="false" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -98,19 +108,21 @@
       <file leaf-file-name="gdp_plot.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/plot/gdp_plot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="78">
+            <state relative-caret-position="260">
               <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="28" selection-end-column="23" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="trading.py" pinned="false" current-in-tab="false">
-        <entry file="file:///Library/Python/2.7/site-packages/tushare/stock/trading.py">
+      <file leaf-file-name="house_invest_plot.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/plot/house_invest_plot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-42">
-              <caret line="56" column="83" lean-forward="true" selection-start-line="56" selection-start-column="83" selection-end-line="56" selection-end-column="83" />
-              <folding />
+            <state relative-caret-position="210">
+              <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+              <folding>
+                <element signature="e#15#46#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -129,7 +141,6 @@
       <find>freshsort</find>
       <find>wdnodes</find>
       <find>a</find>
-      <find>test</find>
       <find>ZB_CPI_M2M</find>
       <find>居民消费价格指数</find>
       <find>get_last_13_month_cpi</find>
@@ -139,6 +150,8 @@
       <find>status_code</find>
       <find>LAST_12</find>
       <find>2019B</find>
+      <find>test</find>
+      <find>parse_gdp</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -167,24 +180,30 @@
         <option value="$PROJECT_DIR$/plot/y2ycache_flag" />
         <option value="$PROJECT_DIR$/plot/m2mcache_flag" />
         <option value="$PROJECT_DIR$/data_source/stats_gov/cpi.py" />
-        <option value="$PROJECT_DIR$/data_source/stats_gov/testdata.py" />
         <option value="$PROJECT_DIR$/data_source/stats_gov/gdpcache_flag" />
         <option value="$PROJECT_DIR$/data_source/stats_gov/gdp.py" />
         <option value="$PROJECT_DIR$/data_source/cache_controller.py" />
         <option value="$PROJECT_DIR$/plot/cpi_plot.py" />
         <option value="$PROJECT_DIR$/monitor/gdp_monitor.py" />
         <option value="$PROJECT_DIR$/plot/gdp_plot.py" />
-        <option value="$PROJECT_DIR$/data_source/tushare/stock.py" />
         <option value="$PROJECT_DIR$/data_source/anjuke/house.py" />
-        <option value="$PROJECT_DIR$/plot/stock_plot.py" />
         <option value="$PROJECT_DIR$/plot/house_plot.py" />
+        <option value="$PROJECT_DIR$/data_source/stats_gov/house_price.py" />
+        <option value="$PROJECT_DIR$/data_source/stats_gov/testdata.py" />
+        <option value="$PROJECT_DIR$/data_source/stats_gov/house_invest.py" />
+        <option value="$PROJECT_DIR$/plot/house_invest_plot.py" />
+        <option value="$PROJECT_DIR$/data_source/tushare/stock.py" />
+        <option value="$PROJECT_DIR$/plot/stock_plot.py" />
+        <option value="$PROJECT_DIR$/data_source/tushare/m2.py" />
+        <option value="$PROJECT_DIR$/plot/m2_plot.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
+    <option name="x" value="38" />
     <option name="y" value="23" />
-    <option name="width" value="1275" />
-    <option name="height" value="797" />
+    <option name="width" value="1332" />
+    <option name="height" value="783" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -217,7 +236,8 @@
             <path>
               <item name="ceco" type="b2602c69:ProjectViewProjectNode" />
               <item name="ceco" type="462c0819:PsiDirectoryNode" />
-              <item name="output" type="462c0819:PsiDirectoryNode" />
+              <item name="data_source" type="462c0819:PsiDirectoryNode" />
+              <item name="tushare" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ceco" type="b2602c69:ProjectViewProjectNode" />
@@ -239,6 +259,8 @@
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/plot" />
+      <recent name="$PROJECT_DIR$/data_source/tushare" />
+      <recent name="$PROJECT_DIR$/data_source/stats_gov" />
       <recent name="$PROJECT_DIR$/monitor" />
     </key>
   </component>
@@ -254,7 +276,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.houseplot">
+  <component name="RunManager" selected="Python.m2plot">
     <configuration name="cpi" type="PythonConfigurationType" factoryName="Python">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -357,6 +379,40 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
+    <configuration name="house_invest" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/usr/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/data_source/stats_gov" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ceco" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/data_source/stats_gov/house_invest.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
+    <configuration name="house_invest_plot" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/usr/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/plot" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ceco" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/plot/house_invest_plot.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
     <configuration name="houseplot" type="PythonConfigurationType" factoryName="Python">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -387,6 +443,40 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="ceco" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/utils/logger.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
+    <configuration name="m2" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/usr/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/data_source/tushare" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ceco" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/data_source/tushare/m2.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
+    <configuration name="m2plot" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/usr/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/plot" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ceco" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/plot/m2_plot.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -442,18 +532,22 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <list size="11">
+    <list size="15">
       <item index="0" class="java.lang.String" itemvalue="Python.cpi" />
       <item index="1" class="java.lang.String" itemvalue="Python.cpimonitor" />
       <item index="2" class="java.lang.String" itemvalue="Python.cpiplot" />
       <item index="3" class="java.lang.String" itemvalue="Python.gdp" />
       <item index="4" class="java.lang.String" itemvalue="Python.stock" />
-      <item index="5" class="java.lang.String" itemvalue="Python.stockplot" />
-      <item index="6" class="java.lang.String" itemvalue="Python.houseplot" />
-      <item index="7" class="java.lang.String" itemvalue="Python.gdpmonitor" />
-      <item index="8" class="java.lang.String" itemvalue="Python.gdpplot" />
-      <item index="9" class="java.lang.String" itemvalue="Python.timeutils" />
-      <item index="10" class="java.lang.String" itemvalue="Python.logger" />
+      <item index="5" class="java.lang.String" itemvalue="Python.m2" />
+      <item index="6" class="java.lang.String" itemvalue="Python.m2plot" />
+      <item index="7" class="java.lang.String" itemvalue="Python.house_invest" />
+      <item index="8" class="java.lang.String" itemvalue="Python.house_invest_plot" />
+      <item index="9" class="java.lang.String" itemvalue="Python.stockplot" />
+      <item index="10" class="java.lang.String" itemvalue="Python.houseplot" />
+      <item index="11" class="java.lang.String" itemvalue="Python.gdpmonitor" />
+      <item index="12" class="java.lang.String" itemvalue="Python.gdpplot" />
+      <item index="13" class="java.lang.String" itemvalue="Python.timeutils" />
+      <item index="14" class="java.lang.String" itemvalue="Python.logger" />
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
@@ -473,7 +567,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1275" height="797" extended-state="1" />
+    <frame x="38" y="23" width="1332" height="783" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -481,10 +575,10 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3282967" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4002849" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23796424" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31549066" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2599179" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24127907" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3015504" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25726745" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37089872" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -553,36 +647,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/monitor/food_y2ycache" />
-    <entry file="file://$PROJECT_DIR$/utils/time_utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="34" column="63" lean-forward="false" selection-start-line="34" selection-start-column="63" selection-end-line="34" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Library/Python/2.7/site-packages/matplotlib/pyplot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="3833" column="4" lean-forward="false" selection-start-line="3833" selection-start-column="4" selection-end-line="3833" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utils/logger.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plot/pct1.png" />
-    <entry file="file://$PROJECT_DIR$/monitor/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/simkai.ttf" />
     <entry file="file:///Library/Python/2.7/site-packages/matplotlib/colors.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -611,13 +675,6 @@
     <entry file="file://$PROJECT_DIR$/plot/m2mcache_flag" />
     <entry file="file://$PROJECT_DIR$/plot/food_cpi.png" />
     <entry file="file://$PROJECT_DIR$/plot/normal_cpi.png" />
-    <entry file="file://$PROJECT_DIR$/data_source/stats_gov/testdata.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="8358" column="35" lean-forward="false" selection-start-line="8358" selection-start-column="30" selection-end-line="8358" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data_source/stats_gov/gdpcache_flag" />
     <entry file="file://$PROJECT_DIR$/cache/food_y2ycache">
       <provider selected="true" editor-type-id="text-editor">
@@ -627,13 +684,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cache/food_y2ycache_flag">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cache/gdpcache">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -682,13 +732,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/monitor/cpi_monitor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/output/food_cpi.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -719,21 +762,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data_source/stats_gov/gdp.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1780">
-          <caret line="136" column="0" lean-forward="false" selection-start-line="136" selection-start-column="0" selection-end-line="136" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/output/warning_gdp.png" />
-    <entry file="file://$PROJECT_DIR$/monitor/gdp_monitor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-16">
-          <caret line="80" column="23" lean-forward="false" selection-start-line="80" selection-start-column="23" selection-end-line="80" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///Library/Python/2.7/site-packages/tushare/futures/domestic.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="122">
@@ -745,7 +774,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-42">
           <caret line="56" column="83" lean-forward="true" selection-start-line="56" selection-start-column="83" selection-end-line="56" selection-end-column="83" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -754,7 +782,7 @@
         <state relative-caret-position="15">
           <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="79" selection-end-column="14" />
           <folding>
-            <element signature="e#15#46#0" expanded="true" />
+            <element signature="e#15#46#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -766,29 +794,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data_source/stats_gov/cpi.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="14" />
-          <folding>
-            <element signature="e#16#27#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plot/gdp_plot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="28" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/collections.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="137">
           <caret line="62" column="0" lean-forward="false" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -804,7 +813,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="208">
           <caret line="84" column="55" lean-forward="false" selection-start-line="84" selection-start-column="17" selection-end-line="84" selection-end-column="55" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -813,33 +821,134 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data_source/tushare/stock.py">
+    <entry file="file://$PROJECT_DIR$/output/house_prices.png" />
+    <entry file="file://$PROJECT_DIR$/monitor/cpi_monitor.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+        <state relative-caret-position="225">
+          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/monitor/gdp_monitor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1182">
+          <caret line="80" column="23" lean-forward="false" selection-start-line="80" selection-start-column="23" selection-end-line="80" selection-end-column="23" />
+          <folding>
+            <element signature="e#16#26#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data_source/stats_gov/house_price.py" />
+    <entry file="file://$PROJECT_DIR$/data_source/stats_gov/cpi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1584">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="14" />
+          <folding>
+            <element signature="e#16#27#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data_source/stats_gov/gdp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="136" column="0" lean-forward="false" selection-start-line="136" selection-start-column="0" selection-end-line="136" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/output/house_prices.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
+    <entry file="file://$PROJECT_DIR$/data_source/stats_gov/testdata.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="117">
+          <caret line="9266" column="30" lean-forward="false" selection-start-line="9266" selection-start-column="0" selection-end-line="9266" selection-end-column="30" />
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/plot/stock_plot.py">
+    <entry file="file://$PROJECT_DIR$/cache/gdpcache">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="175" column="28" lean-forward="true" selection-start-line="175" selection-start-column="28" selection-end-line="175" selection-end-column="28" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data_source/stats_gov/house_invest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="140" column="63" lean-forward="true" selection-start-line="140" selection-start-column="63" selection-end-line="140" selection-end-column="63" />
           <folding>
-            <element signature="e#15#46#0" expanded="true" />
+            <element signature="e#16#27#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/plot/house_plot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="37" column="27" lean-forward="false" selection-start-line="37" selection-start-column="27" selection-end-line="37" selection-end-column="27" />
+        <state relative-caret-position="58">
+          <caret line="40" column="23" lean-forward="false" selection-start-line="40" selection-start-column="23" selection-end-line="40" selection-end-column="23" />
+          <folding>
+            <element signature="e#15#46#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plot/gdp_plot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="28" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plot/house_invest_plot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+          <folding>
+            <element signature="e#15#46#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Python/2.7/site-packages/matplotlib/pyplot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="2774" column="0" lean-forward="false" selection-start-line="2774" selection-start-column="0" selection-end-line="2774" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data_source/tushare/stock.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="20" column="42" lean-forward="true" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plot/stock_plot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1446">
+          <caret line="204" column="0" lean-forward="true" selection-start-line="204" selection-start-column="0" selection-end-line="204" selection-end-column="0" />
+          <folding>
+            <element signature="e#15#46#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data_source/tushare/m2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="32" lean-forward="true" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plot/m2_plot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="27" column="27" lean-forward="true" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="27" />
           <folding>
             <element signature="e#15#46#0" expanded="true" />
           </folding>
